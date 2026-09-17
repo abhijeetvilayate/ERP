@@ -1,0 +1,70 @@
+:root {
+	--erp-hover-duration: 180ms;
+	--erp-hover-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.transition-all,
+.card,
+.btn,
+.nav-link,
+.navbar-brand,
+.list-group-item,
+.hover-white {
+	transition: transform var(--erp-hover-duration) var(--erp-hover-ease),
+		box-shadow var(--erp-hover-duration) var(--erp-hover-ease),
+		color var(--erp-hover-duration) ease,
+		background-color var(--erp-hover-duration) ease,
+		border-color var(--erp-hover-duration) ease;
+}
+
+.card:hover,
+.hover-shadow:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 0.75rem 1.5rem rgba(11, 25, 44, 0.12) !important;
+}
+
+.btn:hover {
+	transform: translateY(-2px);
+}
+
+.btn:active {
+	transform: translateY(0);
+}
+
+.nav-link:hover,
+.navbar-brand:hover,
+.hover-white:hover {
+	transform: translateY(-1px);
+	color: #ffffff !important;
+}
+
+.list-group-item:hover {
+	transform: translateX(4px);
+	background-color: #f8fbff;
+}
+
+.card img {
+	transition: transform 350ms var(--erp-hover-ease), filter 350ms ease;
+}
+
+.card:hover img {
+	transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+	}
+}
