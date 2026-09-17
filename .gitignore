@@ -1,0 +1,24 @@
+# Maven target build outputs
+backend/target/
+*.war
+*.ear
+*.zip
+*.jar
+
+# Node dependencies & dist
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# IDE files
+.project
+.classpath
+.settings/
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
